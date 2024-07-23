@@ -9,10 +9,7 @@
     "test": "vitest",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "pre:commit": "npm run lint && npx lint-staged && npm run test",
-    "pre:push": "npm run build",
-    "prepare": "husky"
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
@@ -42,7 +39,6 @@
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.8.0",
-    "husky": "^9.1.1",
     "jsdom": "^24.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "3.3.3",

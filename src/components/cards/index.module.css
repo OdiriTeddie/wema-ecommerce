@@ -1,0 +1,138 @@
+.card {
+  height: 390px;
+  width: 263px;
+}
+.cardBody {
+  position: relative;
+  width: 262.664px;
+  height: 270px;
+  overflow: hidden;
+  border: 1px solid var(--clr-neutral-500);
+  background-color: var(--clr-neutral-500);
+  margin: 0;
+  padding: 0 10px;
+  vertical-align: top;
+  font-size: var(--font-size-4);
+  font-family: catamaran, sans-serif;
+  box-sizing: border-box;
+}
+
+.topLeft {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  width: 29.9688px;
+  text-align: center;
+  font-size: var(--font-size-2);
+  font-weight: var(--fw-medium);
+  z-index: 100;
+  font-family: montserrat, sans-serif;
+  color: var(--clr-neutral-700);
+}
+
+.topRight {
+  position: absolute;
+  top: 15px;
+  width: 29.9688px;
+  text-align: center;
+  right: 20px;
+  font-size: var(--font-size-2);
+  font-weight: var(--fw-medium);  z-index: 100;
+  font-family: montserrat, sans-serif;
+  color: var(--clr-neutral-700);
+}
+
+.link {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  padding: 3px 5px;
+  display: flex;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: var(--clr-neutral-800);
+  border: 0px none var(--clr-neutral-100);
+  box-sizing: border-box;
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+  font-family: "Catamaran", sans-serif;
+  font-size: var(--font-size-1);
+  font-weight: var(--fw-bold);
+  letter-spacing: normal;
+  margin: 0;
+  outline: 0px none var(--clr-neutral-100);
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  vertical-align: baseline;
+  white-space-collapse: collapse;
+  width: fit-content;
+  -webkit-font-smoothing: antialiased;
+
+  #heart {
+    background-color: var(--clr-neutral-400);
+  }
+}
+.imageContainer {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: auto;
+
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.addToCart {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  font-family: "Catamaran", sans-serif;
+  font-size: var(--font-size-2);
+  font-weight: var(--fw-semi-bold);
+  opacity: 0;
+  color: var(--clr-neutral-400);
+}
+
+.cardBody:hover .link {
+  opacity: 1;
+}
+
+.card:hover .addToCart {
+  opacity: 1;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: var(--spacing-6);
+  margin-top: var(--spacing-5);
+}
+.productContainer h5 {
+  display: block;
+  font-size: var(--font-size-3);
+  font-weight: var(--fw-bold);
+  font-family: catamaran, sans-serif;
+  color: var(--clr-neutral-800);
+  text-transform: uppercase;
+}
+.productContainer p {
+  display: block;
+  font-size: var(--font-size-3);
+  font-weight: var(--fw-medium);
+  font-family: montserrat, sans-serif;
+  color: var(--clr-neutral-400);
+}
+.rate{
+  width: 20px;
+}

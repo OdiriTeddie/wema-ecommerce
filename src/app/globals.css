@@ -8,11 +8,13 @@
   --clr-primary-500: hsl(15, 100%, 30%);
   --clr-primary-600: hsl(15, 100%, 20%);
 
-  --clr-neutral-300: hsl(0, 0%, 100%);
-  --clr-neutral-400: hsl(270, 9%, 17%);
-  --clr-neutral-500: hsl(0, 0%, 43%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(270, 9%, 17%);
+  --clr-neutral-400: hsl(0, 0%, 43%);
+  --clr-neutral-500: hsl(0, 0%, 95%);
   --clr-neutral-600: hsl(0, 0%, 98%);
-  --clr-neutral-700: hsl(0, 0%, 0%);
+  --clr-neutral-700: hsl(0, 0%, 3%);
+  --clr-neutral-800: hsl(0, 0%, 0%);
 
   /* --clr-text: hsl(0, 0%, 43%);
   --clr-surface: hsl(0, 0%, 100%);
@@ -26,18 +28,27 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
   --fw-extra-bold: 800 --base-spacing: 1rem;
-  --spacing-1: 1rem;
-  --spacing-2: 1.25rem;
-  --spacing-3: 1.5625rem;
-  --spacing-4: 1.953125rem;
-  --spacing-5: 2.44140625rem;
-  --spacing-6: 3.0517578125rem;
 
-  --font-size-1: var(--spacing-1);
-  --font-size-2: var(--spacing-2);
-  --font-size-3: var(--spacing-3);
-  --font-size-4: var(--spacing-4);
-  --font-size-5: var(--spacing-5);
+  --spacing-1: 0.625rem;
+  --spacing-2: 0.75rem;
+  --spacing-3: 0.875rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5625rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 1.953125rem;
+  --spacing-9: 2.44140625rem;
+  --spacing-10: 2.813rem;
+  --spacing-11: 3.0517578125rem;
+
+  --font-size-1: 10px;
+  --font-size-2: 12px;
+  --font-size-3: 14px;
+  --font-size-4: 16px;
+  --font-size-5: 20px;
+  --font-size-6: 30px;
+  --font-size-7: 50px;
+  --font-size-8: 32px;
 }
 
 /* Media Queries */

@@ -1,20 +1,34 @@
-"use client"
+import React from "react";
 import styles from "./index.module.css";
 
-
 type ButtonProps = {
-    label: string;
-    onClick: () => void;
-};
-const handleClick = () =>{
-    console.log("winnie")
-}
-export const Button : React.FC<ButtonProps>  = ({ label, onClick }) => {
+//   label?: string;
+  onClick?: () => void;
+  variant?: "primary" | "secondary" | "default";
+  size: "sm" | "md" | "lg";
+  disabled?: boolean;
+  className?: string;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-    return (
-        <button className={styles.btn} onClick={handleClick}>
-            {label}
-        </button>
-    );
+export const Button: React.FC<ButtonProps> = ({
+//   label,
+  onClick,
+  variant = "default",
+  size = "lg",
+  disabled = false,
+  className,
+  children,
+  ...rest
+}) => {
+    
+  return (
+    <button
+      className={`${styles.btn} ${styles[variant]} ${styles[size]} ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+      {...rest}
+    >
+      {children }
+    </button>
+  );
 };
-

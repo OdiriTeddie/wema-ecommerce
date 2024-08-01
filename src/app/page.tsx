@@ -9,7 +9,10 @@ export default function Page() {
   return (
     <div style={{ padding: "0px" }}>
       <h1>Wema Stores</h1>
-      {/* <Button label="Click Me" onClick={() => alert("Button clicked!")} /> */}
+      <Button
+        onClick={() => alert("Button clicked!")}
+        size={"lg"}
+      >click me</Button>
       {/* <div
         style={{
           display: "flex",

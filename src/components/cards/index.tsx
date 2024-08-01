@@ -12,8 +12,9 @@ export type CardProps = {
   productTitle: string;
   price: string;
   rate: string;
-};
-
+  className?: string;
+  children?: React.ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
 export const Card: React.FC<CardProps> = ({
   imageSrc,
   topLeftText,
@@ -23,9 +24,12 @@ export const Card: React.FC<CardProps> = ({
   productTitle,
   price,
   rate,
+  className,
+  children,
+  ...rest
 }) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${className}`} {...rest}>
       <div className={styles.cardBody}>
         {topLeftText && <div className={styles.topLeft}>{topLeftText}</div>}
         {topRightText && <div className={styles.topRight}>{topRightText}</div>}
@@ -39,7 +43,7 @@ export const Card: React.FC<CardProps> = ({
           />
         </div>
         <a href={link} className={styles.link}>
-          <span id="linktext" style={{ padding: "3px"}}>
+          <span id="linktext" style={{ padding: "3px" }}>
             {" "}
             {linkText}
           </span>
@@ -50,13 +54,13 @@ export const Card: React.FC<CardProps> = ({
       </div>
       <div className={styles.productContainer}>
         <h5>{productTitle}</h5>
-          <Image
-            src={rate}
-            alt="Card rate"
-            className={styles.rate}
-            width={0}
-            height={0}
-          />
+        <Image
+          src={rate}
+          alt="Card rate"
+          className={styles.rate}
+          width={0}
+          height={0}
+        />
         <p>${price}</p>
       </div>
       <div>

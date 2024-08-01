@@ -13,13 +13,17 @@ export interface HeaderBannerProps {
   backgroundImage?: string;
   title: string;
   subtitle?: string;
-}
-
+  className?: string;
+  children?: React.ReactNode;
+} 
 const HeaderBanner: React.FC<HeaderBannerProps> = ({
   type,
   backgroundImage,
   title,
   subtitle,
+  className,
+  children,
+  ...rest
 }) => {
   const getClassName = () => {
     switch (type) {
@@ -39,12 +43,14 @@ const HeaderBanner: React.FC<HeaderBannerProps> = ({
   const backgroundStyle = backgroundImage
     ? { backgroundImage: `url(${backgroundImage})` }
     : {};
+    
 
   return (
     <div
-      className={`${styles.banner} ${getClassName()}`}
+      className={`${styles.banner} ${getClassName()}  ${className}`}
       style={backgroundStyle}
       role="banner"
+      {...rest}
     >
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>

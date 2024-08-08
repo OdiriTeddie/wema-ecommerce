@@ -1,0 +1,62 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.fullWidthImage {
+  width: 100%;
+  height: 78vh;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.fullWidthNoImage {
+  width: 100%;
+  height: 50vh;
+  line-height: var(--spacing-10);
+  color: var(--clr-neutral-800);
+}
+
+.fullHeightImage {
+  width: 100%;
+  height: 100vh;
+}
+
+.halfWidthImage {
+  width: 100%;
+  max-width: 100vw;
+  background-position: center center;
+  height: 78vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.halfWidthImage > h2 {
+  margin-bottom: var(--spacing-7);
+  font-size: var(--font-size-6);
+  font-weight: var(--fw-bold);
+}
+
+.content {
+  max-width: 100%;
+}
+.title {
+  font-size: var(--font-size-7);
+  font-weight: var(--fw-bold);
+  font-family: Catamaran, sans-serif;
+}
+.subtitle {
+  font-size: var(--font-size-5);
+  font-weight: var(--fw-light);
+  font-family: Catamaran, sans-serif;
+  margin: var(--spacing-3);
+  vertical-align: baseline;
+  text-align: center;
+  color: var(--clr-neutral-400);
+}

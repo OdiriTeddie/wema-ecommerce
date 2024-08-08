@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Header } from "../layout/header";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <Header
+        logoSrc={"/assets/logoblack.png"}
+        navLinks={[
+          { label: "Home", href: "/" },
+          {
+            label: "About",
+            href: "/about",
+            dropdown: [
+              { label: "Team", href: "/about/team" },
+              { label: "Company", href: "/about/company" },
+            ],
+          },
+          {
+            label: "Services",
+            href: "/services",
+            dropdown: [
+              { label: "Consulting", href: "/services/consulting" },
+              { label: "Development", href: "/services/development" },
+            ],
+          },
+          { label: "Contact", href: "/contact" },
+          { label: "Contact", href: "/contact" },
+          { label: "Contact", href: "/contact" },
+          { label: "Cart", href: "/contact" },
+        ]}
+      />
+        {children}</body>
     </html>
   );
 }

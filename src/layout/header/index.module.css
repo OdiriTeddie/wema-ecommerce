@@ -1,0 +1,253 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px 0;
+  transition: background-color 0.3s ease;
+  background-color: var(--clr-neutral-500);
+  color: var(--clr-neutral-700);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: var(--clr-neutral-100);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  flex: 1;
+}
+
+.nav {
+  flex: 1.5;
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: var(--clr-neutral-800);
+  padding: 10px 20px;
+  font-size: var(--font-size-2);
+  font-weight: var(--fw-bold);
+}
+
+.navItem:hover .dropdown {
+  display: block;
+  animation: myAnim 0.5s ease 0s 1 normal both;
+}
+.navItem:hover a,
+.navItem:active a {
+  color: var(--clr-neutral-400);
+}
+.navItem a.active {
+  color: var(--clr-neutral-400);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 260%;
+  left: 0;
+  background-color: var(--clr-neutral-800);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  transition: all 0.2s ease;
+  padding: 20px 10px;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+  z-index: 10000;
+}
+
+.dropdownItem a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  font-size: var(--font-size-3);
+  font-weight: var(--fw-light);
+}
+
+.burger {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.mobileburger {
+  width: 100%;
+  background-color: aqua;
+  margin-bottom: 20px;
+  display: flex;
+  text-align: right;
+}
+.burgerLine {
+  width: 100%;
+  height: 1px;
+  margin: 3px 0;
+  background-color: var(--clr-neutral-800);
+}
+.burgerText {
+  font-size: var(--font-size-5);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-regular);
+  padding: 10px 20px;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  margin: 0 2px;
+}
+.icons img {
+  margin: 0 10px;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  /* width: 350px; */
+  width: 50vw;
+  animation: myAnim2 0.3s ease 0s 1 normal both;
+  background-color: var(--clr-neutral-800);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+
+.open {
+  right: 0;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.mobileNavItem {
+  padding: 10px 0;
+}
+
+.mobileNavItem a {
+  color: var(--clr-neutral-600);
+  text-decoration: none;
+  font-size: var(--font-size-4);
+  font-weight: var(--fw-bold);
+}
+
+.mobileDropdown {
+  list-style: none;
+  margin: 0;
+  transition: all 0.2s ease;
+  left: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  z-index: 3000;
+  display: none;
+}
+
+.mobileNavLink {
+  position: relative;
+  width: fit-content;
+}
+.mobileNavItem:hover .mobileDropdown {
+  display: block;
+  animation: myAnim 0.5s ease 0s 1 normal both;
+}
+
+.mobileDropdownItem {
+  padding: 5px 0;
+}
+
+.mobileDropdownItem a {
+  color: var(--clr-neutral-400);
+  font-size: var(--font-size-4);
+  font-weight: var(--fw-regular);
+  text-decoration: none;
+}
+
+.MenuDiv {
+  display: none;
+}
+
+@media (max-width: 854px) {
+  .nav ul {
+    display: none;
+  }
+  .MenuDiv {
+    display: flex;
+    align-items: center;
+    margin: 0 3px;
+  }
+  .nav {
+    flex: 0.1;
+  }
+
+  .burger {
+    display: flex;
+  }
+  .icons {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .navOpen .mobileMenu {
+    transform: translateX(0%);
+  }
+
+  .sticky {
+    position: fixed;
+  }
+}
+@keyframes myAnim {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 100% 0%;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+@keyframes myAnim2 {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: 100% 100%;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
